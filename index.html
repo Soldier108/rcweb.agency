@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>rcweb.agency — Meta Ads & Web Development Agency</title>
+  <meta name="description" content="rcweb.agency is a premium digital agency specializing in Meta Ads campaigns, high-converting web development, and ROI-driven digital marketing. Scale your business with us." />
+  <meta name="keywords" content="Meta Ads agency, web development agency, Facebook ads, Instagram ads, performance marketing, web design, digital marketing, rcweb.agency" />
+  <meta name="author" content="rcweb.agency" />
+  <meta name="theme-color" content="#6d28d9" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rcweb.agency/" />
+  <meta property="og:title" content="rcweb.agency — Meta Ads & Web Development Agency" />
+  <meta property="og:description" content="Premium Meta Ads campaigns & web development that drives real results. Scale your business with rcweb.agency." />
+  <meta property="og:site_name" content="rcweb.agency" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ CANVAS 3D BG ============ -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- ============ NAV ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <span class="logo-rc">RC</span><span class="logo-web">web</span><span class="logo-dot">.agency</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#results" class="nav-link">Results</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta btn-glow">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        🚀 Meta Ads + Web Development Agency
+      </div>
+      <h1 class="hero-title">
+        We Scale Brands<br/>
+        With <span class="gradient-text typed-text" id="typed"></span>
+        <span class="typed-cursor">|</span>
+      </h1>
+      <p class="hero-subtitle">
+        Premium Meta Ads campaigns & high-converting websites that turn clicks into clients. 
+        We don't just run ads — we engineer growth systems.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-glow">
+          <span>Start Growing Today</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#results" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <span>View Results</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="150">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Clients Scaled</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="5">0</span><span class="stat-plus">x</span>
+          <span class="stat-label">Avg ROAS</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Client Retention</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="10">0</span><span class="stat-plus">Cr+</span>
+          <span class="stat-label">Revenue Generated</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-3d-card">
+        <div class="card-3d-wrapper" id="card-3d">
+          <div class="floating-card main-card">
+            <div class="card-header">
+              <div class="card-icon meta-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 12c-2.67 0-5.01-1.32-6.44-3.34.03-2.01 4.28-3.12 6.44-3.12 2.15 0 6.41 1.11 6.44 3.12C17.01 16.68 14.67 18 12 18z"/></svg>
+              </div>
+              <div>
+                <div class="card-title">Meta Ads Campaign</div>
+                <div class="card-sub">Active · Running</div>
+              </div>
+              <div class="card-status live">LIVE</div>
+            </div>
+            <div class="card-metrics">
+              <div class="metric">
+                <span class="metric-val">₹2.4L</span>
+                <span class="metric-label">Revenue Today</span>
+              </div>
+              <div class="metric">
+                <span class="metric-val">6.2x</span>
+                <span class="metric-label">ROAS</span>
+              </div>
+              <div class="metric">
+                <span class="metric-val">₹18</span>
+                <span class="metric-label">Cost/Click</span>
+              </div>
+            </div>
+            <div class="card-graph">
+              <svg viewBox="0 0 200 60" fill="none">
+                <defs>
+                  <linearGradient id="graphGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.25"/>
+                    <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,50 L20,42 L40,38 L60,30 L80,22 L100,18 L120,12 L140,8 L160,6 L180,4 L200,2 L200,60 L0,60 Z" fill="url(#graphGrad)"/>
+                <path d="M0,50 L20,42 L40,38 L60,30 L80,22 L100,18 L120,12 L140,8 L160,6 L180,4 L200,2" stroke="#4f46e5" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+          </div>
+          <div class="floating-card mini-card card-orbit-1">
+            <div class="mini-icon">⚡</div>
+            <div class="mini-text">
+              <div class="mini-title">CTR Boost</div>
+              <div class="mini-val">+127%</div>
+            </div>
+          </div>
+          <div class="floating-card mini-card card-orbit-2">
+            <div class="mini-icon">🎯</div>
+            <div class="mini-text">
+              <div class="mini-title">Conversions</div>
+              <div class="mini-val">+340</div>
+            </div>
+          </div>
+          <div class="floating-card mini-card card-orbit-3">
+            <div class="mini-icon">💰</div>
+            <div class="mini-text">
+              <div class="mini-title">Revenue</div>
+              <div class="mini-val">₹15L</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Meta Ads</span><span class="sep">✦</span>
+        <span>Facebook Campaigns</span><span class="sep">✦</span>
+        <span>Instagram Ads</span><span class="sep">✦</span>
+        <span>Web Development</span><span class="sep">✦</span>
+        <span>Landing Pages</span><span class="sep">✦</span>
+        <span>E-commerce</span><span class="sep">✦</span>
+        <span>Performance Marketing</span><span class="sep">✦</span>
+        <span>Conversion Optimization</span><span class="sep">✦</span>
+        <span>Meta Ads</span><span class="sep">✦</span>
+        <span>Facebook Campaigns</span><span class="sep">✦</span>
+        <span>Instagram Ads</span><span class="sep">✦</span>
+        <span>Web Development</span><span class="sep">✦</span>
+        <span>Landing Pages</span><span class="sep">✦</span>
+        <span>E-commerce</span><span class="sep">✦</span>
+        <span>Performance Marketing</span><span class="sep">✦</span>
+        <span>Conversion Optimization</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content" data-aos>
+          <div class="section-badge">About Us</div>
+          <h2 class="section-title">We Are The Agency <br/><span class="gradient-text">That Delivers</span></h2>
+          <p class="section-desc">rcweb.agency is a results-obsessed digital agency. We combine cutting-edge Meta Ads strategies with world-class web development to build growth machines for ambitious brands.</p>
+          <p class="section-desc">From D2C brands to service businesses — we've helped 150+ clients scale to new revenue heights with our data-driven approach.</p>
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon">🎯</div>
+              <div>
+                <div class="feature-title">Precision Targeting</div>
+                <div class="feature-desc">Laser-focused Meta audience research & targeting</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📊</div>
+              <div>
+                <div class="feature-title">Data-Driven Decisions</div>
+                <div class="feature-desc">Every decision backed by real campaign data</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🚀</div>
+              <div>
+                <div class="feature-title">Rapid Scaling</div>
+                <div class="feature-desc">Proven frameworks to scale budgets profitably</div>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-glow">Work With Us</a>
+        </div>
+        <div class="about-visual" data-aos>
+          <div class="about-3d-grid">
+            <div class="about-card glass-card">
+              <div class="about-card-icon">📱</div>
+              <div class="about-card-num">₹50Cr+</div>
+              <div class="about-card-label">Ad Spend Managed</div>
+            </div>
+            <div class="about-card glass-card">
+              <div class="about-card-icon">🌐</div>
+              <div class="about-card-num">200+</div>
+              <div class="about-card-label">Websites Delivered</div>
+            </div>
+            <div class="about-card glass-card">
+              <div class="about-card-icon">⭐</div>
+              <div class="about-card-num">4.9/5</div>
+              <div class="about-card-label">Client Rating</div>
+            </div>
+            <div class="about-card glass-card">
+              <div class="about-card-icon">🏆</div>
+              <div class="about-card-num">5 Yrs</div>
+              <div class="about-card-label">Industry Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <div class="section-badge">What We Do</div>
+        <h2 class="section-title">Services That <span class="gradient-text">Scale You</span></h2>
+        <p class="section-subtitle">End-to-end digital solutions — from ad campaigns to complete web ecosystems</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card glass-card featured-service" data-aos>
+          <div class="service-glow"></div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">📣</div>
+          </div>
+          <h3 class="service-title">Meta Ads Management</h3>
+          <p class="service-desc">Full-funnel Facebook & Instagram ad campaigns. Creative strategy, audience research, A/B testing, and scale — all handled by certified Meta partners.</p>
+          <ul class="service-list">
+            <li>✓ Campaign Architecture & Setup</li>
+            <li>✓ Creative Production & Copywriting</li>
+            <li>✓ Audience Research & Lookalikes</li>
+            <li>✓ Retargeting & Funnel Building</li>
+            <li>✓ Daily Monitoring & Optimization</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm">Get Started →</a>
+        </div>
+        <div class="service-card glass-card" data-aos>
+          <div class="service-icon-wrap">
+            <div class="service-icon">💻</div>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Custom, high-performance websites built to convert. From stunning landing pages to complex e-commerce platforms.</p>
+          <ul class="service-list">
+            <li>✓ Custom Website Design</li>
+            <li>✓ E-commerce Development</li>
+            <li>✓ Landing Page Optimization</li>
+            <li>✓ Mobile-First Responsive</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-sm">Learn More →</a>
+        </div>
+        <div class="service-card glass-card" data-aos>
+          <div class="service-icon-wrap">
+            <div class="service-icon">📈</div>
+          </div>
+          <h3 class="service-title">Performance Marketing</h3>
+          <p class="service-desc">ROI-driven campaigns across all Meta platforms. We focus on your bottom line, not vanity metrics.</p>
+          <ul class="service-list">
+            <li>✓ ROAS Optimization</li>
+            <li>✓ Funnel Analysis</li>
+            <li>✓ Budget Scaling Strategy</li>
+            <li>✓ Competitor Research</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-sm">Learn More →</a>
+        </div>
+        <div class="service-card glass-card" data-aos>
+          <div class="service-icon-wrap">
+            <div class="service-icon">🎨</div>
+          </div>
+          <h3 class="service-title">Creative & Branding</h3>
+          <p class="service-desc">Scroll-stopping ad creatives, brand identity, and visual storytelling that makes your brand unforgettable.</p>
+          <ul class="service-list">
+            <li>✓ Ad Creative Design</li>
+            <li>✓ Video Ad Production</li>
+            <li>✓ Brand Identity</li>
+            <li>✓ Copywriting</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-sm">Learn More →</a>
+        </div>
+        <div class="service-card glass-card" data-aos>
+          <div class="service-icon-wrap">
+            <div class="service-icon">🛒</div>
+          </div>
+          <h3 class="service-title">E-commerce Growth</h3>
+          <p class="service-desc">Full-stack e-commerce solutions — Shopify, WooCommerce, custom builds combined with high-converting Meta ad campaigns.</p>
+          <ul class="service-list">
+            <li>✓ Shopify Development</li>
+            <li>✓ Product Ads Strategy</li>
+            <li>✓ Cart Abandonment Retargeting</li>
+            <li>✓ Catalog Ads</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-sm">Learn More →</a>
+        </div>
+        <div class="service-card glass-card" data-aos>
+          <div class="service-icon-wrap">
+            <div class="service-icon">📊</div>
+          </div>
+          <h3 class="service-title">Analytics & Reporting</h3>
+          <p class="service-desc">Crystal-clear reporting dashboards and insights. Know exactly where every rupee goes and what it returns.</p>
+          <ul class="service-list">
+            <li>✓ Custom Dashboards</li>
+            <li>✓ Pixel & Conversion Tracking</li>
+            <li>✓ Weekly Performance Reports</li>
+            <li>✓ Attribution Modeling</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost btn-sm">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS / CASE STUDIES ============ -->
+  <section class="results section" id="results">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <div class="section-badge">Proof of Work</div>
+        <h2 class="section-title">Real Results For <span class="gradient-text">Real Brands</span></h2>
+        <p class="section-subtitle">Numbers that speak louder than promises</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-card glass-card" data-aos>
+          <div class="result-tag">D2C Fashion Brand</div>
+          <div class="result-metrics">
+            <div class="result-metric">
+              <span class="result-val highlight">8.2x</span>
+              <span class="result-label">ROAS Achieved</span>
+            </div>
+            <div class="result-metric">
+              <span class="result-val">₹40L</span>
+              <span class="result-label">Monthly Revenue</span>
+            </div>
+          </div>
+          <p class="result-desc">Scaled from ₹2L to ₹40L/month in 4 months using our Meta Ads growth system and a new Shopify store.</p>
+          <div class="result-tags-row">
+            <span class="tag">Meta Ads</span>
+            <span class="tag">Shopify</span>
+            <span class="tag">Creative</span>
+          </div>
+        </div>
+        <div class="result-card glass-card" data-aos>
+          <div class="result-tag">Real Estate Developer</div>
+          <div class="result-metrics">
+            <div class="result-metric">
+              <span class="result-val highlight">320+</span>
+              <span class="result-label">Qualified Leads</span>
+            </div>
+            <div class="result-metric">
+              <span class="result-val">₹65</span>
+              <span class="result-label">Cost Per Lead</span>
+            </div>
+          </div>
+          <p class="result-desc">Generated 320+ high-quality real estate leads at ₹65 CPL with hyper-targeted Facebook lead gen campaigns.</p>
+          <div class="result-tags-row">
+            <span class="tag">Lead Gen</span>
+            <span class="tag">Facebook Ads</span>
+            <span class="tag">Landing Page</span>
+          </div>
+        </div>
+        <div class="result-card glass-card" data-aos>
+          <div class="result-tag">EdTech Startup</div>
+          <div class="result-metrics">
+            <div class="result-metric">
+              <span class="result-val highlight">15x</span>
+              <span class="result-label">Revenue Growth</span>
+            </div>
+            <div class="result-metric">
+              <span class="result-val">5000+</span>
+              <span class="result-label">Course Enrollments</span>
+            </div>
+          </div>
+          <p class="result-desc">Took an EdTech brand from ₹1L to ₹15L/month with Instagram funnel ads and a high-converting course website.</p>
+          <div class="result-tags-row">
+            <span class="tag">Instagram Ads</span>
+            <span class="tag">Web Dev</span>
+            <span class="tag">Funnel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <div class="section-badge">How It Works</div>
+        <h2 class="section-title">Our Proven <span class="gradient-text">Growth Process</span></h2>
+        <p class="section-subtitle">A systematic, battle-tested approach to scaling your brand</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step" data-aos>
+          <div class="step-num">01</div>
+          <div class="step-content glass-card">
+            <div class="step-icon">🔍</div>
+            <h3 class="step-title">Discovery & Audit</h3>
+            <p class="step-desc">We dive deep into your business, current ads (if any), competitors, and goals. Full marketing audit included.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos>
+          <div class="step-num">02</div>
+          <div class="step-content glass-card">
+            <div class="step-icon">🗺️</div>
+            <h3 class="step-title">Strategy & Planning</h3>
+            <p class="step-desc">Custom growth strategy tailored to your brand — campaign structure, creative direction, funnel mapping, and budget planning.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos>
+          <div class="step-num">03</div>
+          <div class="step-content glass-card">
+            <div class="step-icon">🚀</div>
+            <h3 class="step-title">Launch & Optimize</h3>
+            <p class="step-desc">We launch campaigns with precision targeting, monitor daily, A/B test creatives, and optimize continuously for maximum ROI.</p>
+          </div>
+        </div>
+        <div class="process-step" data-aos>
+          <div class="step-num">04</div>
+          <div class="step-content glass-card">
+            <div class="step-icon">📈</div>
+            <h3 class="step-title">Scale & Report</h3>
+            <p class="step-desc">Once we find winners, we scale profitably. You get transparent weekly reports with every metric that matters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <div class="section-badge">Pricing</div>
+        <h2 class="section-title">Transparent <span class="gradient-text">Pricing Plans</span></h2>
+        <p class="section-subtitle">No hidden fees. No surprises. Just results.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card glass-card" data-aos>
+          <div class="pricing-header">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price">₹15,000<span>/mo</span></div>
+            <div class="plan-sub">Best for small businesses</div>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Meta Ads Setup & Management</li>
+            <li>✓ Up to ₹50K Ad Budget</li>
+            <li>✓ 2 Ad Creatives/week</li>
+            <li>✓ Audience Research</li>
+            <li>✓ Weekly Reports</li>
+            <li>✓ WhatsApp Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost w-full">Get Started</a>
+        </div>
+        <div class="pricing-card glass-card popular-plan" data-aos>
+          <div class="popular-badge">Most Popular ⭐</div>
+          <div class="pricing-header">
+            <div class="plan-name">Growth</div>
+            <div class="plan-price">₹30,000<span>/mo</span></div>
+            <div class="plan-sub">For scaling businesses</div>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Full Meta Ads Management</li>
+            <li>✓ Up to ₹2L Ad Budget</li>
+            <li>✓ 5 Ad Creatives/week</li>
+            <li>✓ Lookalike & Retargeting</li>
+            <li>✓ Landing Page (1 Page)</li>
+            <li>✓ A/B Testing</li>
+            <li>✓ Bi-weekly Strategy Calls</li>
+            <li>✓ Dedicated Account Manager</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-glow w-full">Get Started</a>
+        </div>
+        <div class="pricing-card glass-card" data-aos>
+          <div class="pricing-header">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-price">Custom<span></span></div>
+            <div class="plan-sub">For high-growth brands</div>
+          </div>
+          <ul class="plan-features">
+            <li>✓ Everything in Growth</li>
+            <li>✓ Unlimited Ad Budget</li>
+            <li>✓ Full Website Development</li>
+            <li>✓ Unlimited Creatives</li>
+            <li>✓ Multi-Platform Strategy</li>
+            <li>✓ Weekly Strategy Calls</li>
+            <li>✓ Priority 24/7 Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost w-full">Talk to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <div class="section-badge">Client Love</div>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card" data-aos>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"rcweb.agency took our D2C brand from ₹2L to ₹35L/month in just 3 months. Their Meta Ads strategy is absolutely next-level. Best agency decision we've made!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RS</div>
+            <div>
+              <div class="author-name">Rajesh Sharma</div>
+              <div class="author-role">Founder, TrendWear India</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card" data-aos>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The website they built for us converts at 4.2% — double our previous one. Combined with their Facebook ads, we're seeing consistent 7x ROAS month after month."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PK</div>
+            <div>
+              <div class="author-name">Priya Kapoor</div>
+              <div class="author-role">CEO, EduMax Academy</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card" data-aos>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Transparent, responsive, and results-driven. They generated 500+ real estate leads in our first month at half the cost of our previous agency. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div>
+              <div class="author-name">Amit Mehta</div>
+              <div class="author-role">Director, Prime Properties</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA SECTION ============ -->
+  <section class="cta-section section" id="contact">
+    <div class="container">
+      <div class="cta-box glass-card" data-aos>
+        <div class="cta-glow"></div>
+        <div class="section-badge">Let's Talk</div>
+        <h2 class="cta-title">Ready To Scale <span class="gradient-text">Your Business?</span></h2>
+        <p class="cta-desc">Book a free strategy call. We'll analyze your business, audit your ads, and show you exactly how to grow.</p>
+        <div class="contact-form-row">
+          <div class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" class="form-input" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" placeholder="WhatsApp Number" class="form-input" autocomplete="off" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" class="form-input" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <select id="service" class="form-input form-select">
+                  <option value="" disabled selected>Select Service</option>
+                  <option>Meta Ads Management</option>
+                  <option>Web Development</option>
+                  <option>Both Services</option>
+                  <option>E-commerce Growth</option>
+                  <option>Strategy Consultation</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <input type="text" id="budget" placeholder="Monthly Ad Budget (optional)" class="form-input" autocomplete="off" />
+            </div>
+            <button class="btn btn-primary btn-glow btn-full" id="submit-btn" onclick="handleSubmit()">
+              <span>Book Free Strategy Call</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div id="form-success" class="form-success hidden">
+              🎉 Thanks! We'll WhatsApp you within 2 hours.
+            </div>
+          </div>
+        </div>
+        <div class="cta-alternatives">
+          <a href="https://wa.me/919565467372" class="alt-cta" target="_blank">
+            <span class="alt-icon">💬</span>
+            <span>WhatsApp Us</span>
+          </a>
+          <a href="mailto:hello@rcweb.agency" class="alt-cta">
+            <span class="alt-icon">📧</span>
+            <span>hello@rcweb.agency</span>
+          </a>
+          <a href="https://instagram.com/rcweb.agency" class="alt-cta" target="_blank">
+            <span class="alt-icon">📸</span>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-rc">RC</span><span class="logo-web">web</span><span class="logo-dot">.agency</span>
+          </div>
+          <p class="footer-tagline">Your growth. Our obsession. We scale brands with Meta Ads & premium web development.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/rcweb.agency" class="social-link" target="_blank">Instagram</a>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="#services">Meta Ads Management</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">E-commerce Growth</a></li>
+            <li><a href="#services">Creative & Branding</a></li>
+            <li><a href="#services">Analytics & Reporting</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#results">Case Studies</a></li>
+            <li><a href="#process">How We Work</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li>📧 hello@rcweb.agency</li>
+            <li>💬 WhatsApp: +91 99999 99999</li>
+            <li>📸 @rcweb.agency</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-text">© 2025 rcweb.agency · All rights reserved · Made with ❤️ in India</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a
+    href="https://wa.me/919565467372?text=Hi%20rcweb.agency!%20I%27m%20interested%20in%20your%20Meta%20Ads%20%26%20Web%20Development%20services.%20Can%20we%20talk%3F"
+    class="wa-float"
+    id="wa-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    <span class="wa-tooltip">Chat with us 👋</span>
+    <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-ping"></span>
+  </a>
+
+  <!-- ============ SCROLL TOP ============ -->
+  <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
